@@ -1,10 +1,8 @@
 package cmd
 
-//package main
-
 import (
 	"fmt"
-	"module04/02_task/internal"
+	"module4/02_task/internal"
 )
 
 func main() {

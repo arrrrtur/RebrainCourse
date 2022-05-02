@@ -3,7 +3,7 @@ package cmd
 import (
 	"errors"
 	"fmt"
-	"module04/01_task/internal"
+	"module4/01_task/internal"
 )
 
 const DEFAULT_DISCOUNT = 500

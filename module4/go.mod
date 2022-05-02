@@ -1,3 +1,3 @@
-module module04
+module module4
 
 go 1.18
