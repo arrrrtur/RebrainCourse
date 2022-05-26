@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08997a0a-29a4-4c76-a70f-ec2c36f6ff4d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/04_task/cmd/myapp.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/04_task/internal/Partner.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05_task/cmd/myApp.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/05_task/internal/Structurs.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module04/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03_task/cmd/myapp.go" beforeDir="false" afterPath="$PROJECT_DIR$/03_task/cmd/myapp.go" afterDir="false" />
-    </list>
+    <list default="true" id="08997a0a-29a4-4c76-a70f-ec2c36f6ff4d" name="Changes" comment="add tasks 4 and 5 module 4" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,6 +99,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add tasks 4 and 5 module 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="add tasks 4 and 5 module 4" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
