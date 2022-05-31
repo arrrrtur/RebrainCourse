@@ -16,14 +16,17 @@ const (
 func main() {
 	cache := internal.Cache{Storage: make(map[string]int)}
 
-	semaphore := make(chan int, 4)
+	semaphore := internal.NewSemaphore(4)
 
 	for i := 0; i < 10; i++ {
-		semaphore <- i
+		if err := semaphore.Acquire(); err != nil {
+			panic(fmt.Errorf("err: %+v\n", err.Error()))
+		}
 		go func() {
 			defer func() {
-				msg := <-semaphore
-				fmt.Printf("first loop message - %v\n", msg)
+				if err := semaphore.Release(); err != nil {
+					panic(fmt.Errorf("err: %+v\n", err.Error()))
+				}
 			}()
 			cache.Increase(k1, step)
 			time.Sleep(time.Millisecond * 100)
@@ -31,18 +34,22 @@ func main() {
 	}
 
 	for i := 0; i < 10; i++ {
-		semaphore <- i
+		if err := semaphore.Acquire(); err != nil {
+			panic(fmt.Errorf("err: %+v\n", err.Error()))
+
+		}
 		go func(i int) {
 			defer func() {
-				msg := <-semaphore
-				fmt.Printf("second loop message - %v\n", msg)
+				if err := semaphore.Release(); err != nil {
+					panic(fmt.Errorf("err: %+v\n", err.Error()))
+				}
 			}()
 			cache.Set(k1, step*i)
 			time.Sleep(time.Millisecond * 100)
 		}(i)
 	}
 
-	for len(semaphore) > 0 {
+	for semaphore.Len() > 0 {
 		time.Sleep(time.Millisecond * 10)
 	}
 	fmt.Println(cache.Get(k1))
