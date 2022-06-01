@@ -4,7 +4,7 @@ package cmd
 
 import (
 	"fmt"
-	"module5/task_05/internal"
+	"module5/05_task/internal"
 	"time"
 )
 
